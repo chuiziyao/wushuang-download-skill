@@ -222,7 +222,10 @@ for f in sorted(glob.glob('./out3/*')):
 
 1. 改 `scripts/wushuang_dl.py`（本技能自带的那份就是源码）
 2. 重新打包 exe（可选）：用 `wushuang-download` 仓库里的 `tools/` —— 图标生成、PE 图标校验、界面自检、成品 exe 自检
-3. **版本号要同步改三处**：`APP_VER`（源码）、`version_info.txt` 的 `filevers/prodvers/FileVersion/ProductVersion`、使用说明标题
+3. 更新本仓库：把改动同步过来并推送到 GitHub。
+   本机 `git push` 连不上 github.com 时，走 Git Data API 提交 —— 标准做法见技能 `github-publish-fallback`
+
+**版本号要同步改三处**：`APP_VER`（源码）、`version_info.txt` 的 `filevers/prodvers/FileVersion/ProductVersion`、使用说明标题。
 
 打包命令（**必须用带 tkinter 的 Python**，managed 版 Python 3.13 没有 tkinter）：
 
